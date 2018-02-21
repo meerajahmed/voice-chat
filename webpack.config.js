@@ -1,5 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ExtractTextWebpackPlugin = require("extract-text-webpack-plugin");
+
 const config = {
   entry: "./src",
   output: {
@@ -7,20 +9,30 @@ const config = {
     filename: "[hash]bundle.js"
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loader: ['babel-loader'],
-        exclude: /node_module/
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        }
+      },
+      {
+        test: /\.css$/,
+        use: ExtractTextWebpackPlugin.extract({
+          use: "css-loader",
+          fallback: "style-loader" // for lazy loaded bundled
+        })
       }
     ]
   },
   plugins: [
+    new ExtractTextWebpackPlugin("style.css"),
     new HtmlWebpackPlugin({
       template: "./src/index.html"
     })
   ],
-  devtool: "eval-source-map"
+  devtool: "source-map"
 };
 
 module.exports = config;
