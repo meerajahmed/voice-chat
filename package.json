@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/meerajahmed/voice-chat#readme",
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "material-design-lite": "^1.3.0"
   },
   "devDependencies": {
