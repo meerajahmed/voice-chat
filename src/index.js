@@ -1,7 +1,7 @@
 /*
-*Start of Custom Js for handling toggle of chat box
-*
-*/
+ *Start of Custom Js for handling toggle of chat box
+ *
+ */
 
 /**Function for closing the chat box on clicking close button**/
 $(document).on('click', '.panel-heading span.icon_minim', function(e) {
@@ -28,29 +28,27 @@ $(document).on('focus', '.panel-footer input.chat_input', function(e) {
 
 /**Function for removing chat box on close icon**/
 
-$(document).on('click', '.icon_close', function (e) {
-    //$(this).parent().parent().parent().parent().remove();
-    //$( "#chat_window_1" ).remove();
-    $('#chat_window_1').animate({width: 'toggle'}, 1000, function(){
-    	$(this).hide();
-	});
-	$("#id_chatbox").show();
+$(document).on('click', '.icon_close', function(e) {
+    $('#chat_window_1').animate({ width: 'toggle' }, 500, function() {
+        $(this).hide();
+        $("#id_chatbox").show();
+    });
+
 
 });
-
-$(document).on('click', '#id_chatbox', function (e) {
-    $('#chat_window_1').animate({width: 'toggle'}, 1000, function(){
-    	$('#chat_window_1').show();
-	});
+/**Function to open chat box**/
+$(document).on('click', '#id_chatbox', function(e) {
+    $('#chat_window_1').animate({ width: 'toggle' }, 500, function() {
+        $('#chat_window_1').show();
+    });
     $("#id_chatbox").hide();
 });
-
-$(document).on('click','#btn-chat',function(e){
-	var $this = $(this);
-	if ($this.hasClass('glyphicon-volume-down')) {
-		 $this.removeClass('glyphicon-volume-down').addClass('glyphicon-bullhorn btn-primary');
-	}
-	else{
-		$this.removeClass('glyphicon-bullhorn btn-primary').addClass('glyphicon-volume-down');
-	}
+/**Function to toggle mic icon**/
+$(document).on('click', '#btn-chat', function(e) {
+    var $this = $(this);
+    if ($this.hasClass('btn-mic')) {
+        $this.removeClass('btn-mic').addClass('btn-feed');
+    } else {
+        $this.removeClass('btn-feed').addClass('btn-mic');
+    }
 })

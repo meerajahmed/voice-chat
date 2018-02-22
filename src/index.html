@@ -6,13 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Voice Chat</title>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="/src/app.css">
 </head>
 
 <body>
-   <!--Header Section Start-->
-    <header>
+    <!--Header Section Start-->
+    <!-- <header>
         <div class="menu">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -20,42 +19,42 @@
                 </div>
             </div>
         </div>
-    </header>
+    </header> -->
     <!--Header Section End-->
-      <main>
-        <div class="row col-sm-offset-11 col-md-1 chat_box" id="id_chatbox">
+    <main>
+        <div class="row chat_box" id="id_chatbox">
             <img src="/assets/img/voice.png" class="img-circle" alt="voice chat">
-        </div>   
+        </div>
         <!--Main Chat Box Start-->
         <div class="container">
-            <div class="row chat-window col-xs-5 col-md-3" id="chat_window_1" style="display: none">
-                <div class="col-xs-12 col-md-12">
+            <div class="chat-window" id="chat_window_1" style="display: none">
+                <div class="pd-rt">
                     <div class="panel panel-default">
                         <div class="panel-heading top-bar">
-                            <div class="col-md-8 col-xs-8">
-                                <h3 class="panel-title">Voice Chat</h3>
+                            <div class="top_name">
+                                <h3 class="panel-title">Voice Assistance</h3>
                             </div>
-                            <div class="col-md-4 col-xs-4" style="text-align: right;">
-                                <a href="#"><span class="glyphicon glyphicon-chevron-right icon_close" data-id="chat_window_1"></span></a>
+                            <div class="top_close">
+                                <a href="#"><span class="icon_close" data-id="chat_window_1"></span></a>
                             </div>
                         </div>
                         <div class="panel-body msg_container_base">
                             <div class="row msg_container base_sent">
-                                <div class="col-md-10 col-xs-10">
+                                <div class="message">
                                     <div class="messages msg_sent">
                                         <p>Hi</p>
                                         <time datetime="2009-11-13T20:00">Aman </time>
                                     </div>
                                 </div>
                                 <div class="col-md-2 col-xs-2 avatar">
-                                    <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                    <img src="/assets/img/avatar.png" class=" img-responsive ">
                                 </div>
                             </div>
                             <div class="row msg_container base_receive">
-                                <div class="col-md-2 col-xs-2 avatar">
-                                    <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                <div class="avatar">
+                                    <img src="/assets/img/avatar.png" class=" img-responsive ">
                                 </div>
-                                <div class="col-md-10 col-xs-10">
+                                <div class="message">
                                     <div class="messages msg_receive">
                                         <p>Hello</p>
                                         <time datetime="2009-11-13T20:00">Client</time>
@@ -64,9 +63,9 @@
                             </div>
                             <div class="row msg_container base_receive">
                                 <div class="col-md-2 col-xs-2 avatar">
-                                    <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                    <img src="/assets/img/avatar.png" class=" img-responsive ">
                                 </div>
-                                <div class="col-xs-10 col-md-10">
+                                <div class="message">
                                     <div class="messages msg_receive">
                                         <p>that mongodb thing looks good, huh? tiny master db, and huge document store</p>
                                         <time datetime="2009-11-13T20:00">Client</time>
@@ -74,18 +73,18 @@
                                 </div>
                             </div>
                             <div class="row msg_container base_sent">
-                                <div class="col-xs-10 col-md-10">
+                                <div class="message">
                                     <div class="messages msg_sent">
                                         <p>Yeah That looks good</p>
                                         <time datetime="2009-11-13T20:00">Aman</time>
                                     </div>
                                 </div>
                                 <div class="col-md-2 col-xs-2 avatar">
-                                    <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                    <img src="/assets/img/avatar.png" class=" img-responsive ">
                                 </div>
                             </div>
                         </div>
-                        <div class="panel-footer">
+                        <div>
                             <!-- <div class="form-group">
                                 <div class="inner-addon right-addon">
                                    <i class="glyphicon glyphicon-volume-down"></i> 
@@ -93,20 +92,20 @@
                                 </div>
                             </div> -->
                             <div class="input-group">
-                            <input id="btn-input" type="text" class="form-control input-sm chat_input" placeholder="Send your message here..." />
-                            <span class="input-group-btn">
-                               <button class="btn glyphicon glyphicon-volume-down btn-sm" id="btn-chat"></button>
+                                <input id="btn-input" type="text" class="form-control input-sm chat_input" placeholder="Send your message here..." />
+                                <span class="input-group-btn">
+                               <button class="btn btn-mic btn-sm pd-btn" id="btn-chat"></button>
                             </span>
-                        </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!--Main chat box end-->
-      </main>  
-    <footer>
-        <!--Footer Start-->
+    </main>
+    <!-- <footer>
+        
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
@@ -118,10 +117,9 @@
                 </div>
             </div>
         </div>
-        <!--Footer End-->
-    </footer>
+       
+    </footer> -->
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
