@@ -1,153 +1,147 @@
+/*
+*Start of Custom Css
+*
+*/
+
+/*Importing Font Family*/
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-body
-{
+body {
     font-family: 'Open Sans', sans-serif;
-    }
-    .menu
-{
-background-color: #00547E;
-border-bottom: 4px solid #04A3ED;
-width:100%;
-height: auto;
-padding: 0 10px;
-
-margin: 0px;
-z-index: 1;
-opacity: 0.9;
 }
 
-.menu  .navbar-nav > .active > a
-{
-background-color : #04A3ED;
-color: white;
-font-weight: bold;
-}
-
-.menu  .navbar-nav >  li >  a
-{
-font-size: 13px;
-color: white;
-padding: 10px 35px;
-
-}
-.menu  .navbar-nav >  li >  a:hover
-{
-background-color: #04A3ED;
-}
-
-.navbar-header > a
-{
-font-family: 'Ubuntu Condensed', sans-serif;
-padding: 0px;
-margin: 0px;
-text-decoration: none;
-color: white;
-font-size: 25px;
-padding: 5px 30px;
-}
-.navbar-header > a:hover
-{
-text-decoration: none;
-color: #04A3ED;
-}
-
-.footer-bottom {
+/*Header Css Start*/
+.menu {
     background-color: #00547E;
     border-bottom: 4px solid #04A3ED;
-    min-height: 30px;
     width: 100%;
-    bottom: 0;
-    position: absolute;
-}
-.copyright {
-    color: #fff;
-    line-height: 30px;
-    min-height: 30px;
-    padding: 7px 0;
-}
-.design {
-    color: #fff;
-    line-height: 30px;
-    min-height: 30px;
-    padding: 7px 0;
-    text-align: right;
-}
-.design a {
-    color: #fff;
+    height: auto;
+    padding: 0 10px;
+
+    margin: 0px;
+    z-index: 1;
+    opacity: 0.9;
 }
 
-
-.col-md-2, .col-md-10{
-    padding:0;
+.menu .navbar-nav>.active>a {
+    background-color: #04A3ED;
+    color: white;
+    font-weight: bold;
 }
-.panel{
+
+.menu .navbar-nav>li>a {
+    font-size: 13px;
+    color: white;
+    padding: 10px 35px;
+}
+
+.menu .navbar-nav>li>a:hover {
+    background-color: #04A3ED;
+}
+
+.navbar-header>a {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    padding: 5px 30px;
+}
+
+.navbar-header>a:hover {
+    text-decoration: none;
+    color: #04A3ED;
+}
+/*Header Css End*/
+
+/*Start of chat Box*/
+.col-md-2,
+.col-md-10 {
+    padding: 0;
+}
+
+.panel {
     margin-bottom: 0px;
 }
-.chat-window{
-    bottom:50px;
-    position:fixed;
-    float:right;
+
+.chat-window {
+    bottom: 50px;
+    position: fixed;
+    float: right;
     right: 0;
-    margin-left:10px;
+    margin-left: 10px;
 }
-.chat-window > div > .panel{
+
+.chat-window>div>.panel {
     border-radius: 5px 5px 0 0;
 }
-.icon_minim{
-    padding:2px 10px;
+
+.icon_minim {
+    padding: 2px 10px;
 }
-.msg_container_base{
-  background: #e5e5e5;
-  margin: 0;
-  padding: 0 10px 10px;
-  max-height:300px;
-  overflow-x:hidden;
+
+.msg_container_base {
+    background: #e5e5e5;
+    margin: 0;
+    padding: 0 10px 10px;
+    max-height: 300px;
+    overflow-x: hidden;
 }
+
 .top-bar {
-  background: #666;
-  color: white;
-  padding: 10px;
-  position: relative;
-  overflow: hidden;
+    background: #666;
+    color: white;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
 }
-.msg_receive{
-    padding-left:0;
-    margin-left:0;
+
+.msg_receive {
+    padding-left: 0;
+    margin-left: 0;
 }
-.msg_sent{
-    padding-bottom:20px !important;
-    margin-right:0;
+
+.msg_sent {
+    padding-bottom: 20px !important;
+    margin-right: 0;
 }
+
 .messages {
-  background: white;
-  padding: 10px;
-  border-radius: 2px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  max-width:100%;
+    background: white;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
 }
-.messages > p {
+
+.messages>p {
     font-size: 13px;
     margin: 0 0 0.2rem 0;
-  }
-.messages > time {
+}
+
+.messages>time {
     font-size: 11px;
     color: #ccc;
 }
+
 .msg_container {
     padding: 10px;
     overflow: hidden;
     display: flex;
 }
+
 img {
     display: block;
     width: 100%;
 }
+
 .avatar {
     position: relative;
 }
-.base_receive > .avatar:after {
+
+.base_receive>.avatar:after {
     content: "";
     position: absolute;
     top: 0;
@@ -160,10 +154,11 @@ img {
 }
 
 .base_sent {
-  justify-content: flex-end;
-  align-items: flex-end;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
-.base_sent > .avatar:after {
+
+.base_sent>.avatar:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -176,51 +171,70 @@ img {
     box-shadow: 1px 1px 2px rgba(black, 0.2); // not quite perfect but close
 }
 
-.msg_sent > time{
+.msg_sent>time {
     float: right;
 }
-
-
-
-.msg_container_base::-webkit-scrollbar-track
-{
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+.msg_container_base::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #F5F5F5;
 }
 
-.msg_container_base::-webkit-scrollbar
-{
+.msg_container_base::-webkit-scrollbar {
     width: 12px;
     background-color: #F5F5F5;
 }
 
-.msg_container_base::-webkit-scrollbar-thumb
-{
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+.msg_container_base::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
     background-color: #555;
 }
 
-.btn-group.dropup{
-    position:fixed;
-    left:0px;
-    bottom:0;
+.btn-group.dropup {
+    position: fixed;
+    left: 0px;
+    bottom: 0;
 }
+/*Glyphicon css start input box*/
+
 .inner-addon {
-  position: relative;
+    position: relative;
 }
 
-/* style glyph */
 .inner-addon .glyphicon {
-  position: absolute;
-  padding: 10px;
-  pointer-events: none;
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
 }
 
-/* align glyph */
-.left-addon .glyphicon  { left:  0px;}
-.right-addon .glyphicon { right: 0px;}
+.left-addon .glyphicon {
+    left: 0px;
+}
 
-/* add padding  */
-.left-addon input  { padding-left:  30px; }
-.right-addon input { padding-right: 30px; }
+.right-addon .glyphicon {
+    right: 0px;
+}
+.left-addon input {
+    padding-left: 30px;
+}
+.right-addon input {
+    padding-right: 30px;
+}
+/*Glyphicon css end input box*/
+/*End of Chat Box*/
+/**Footer Css Start**/
+.footer-bottom {
+    background-color: #00547E;
+    border-bottom: 4px solid #04A3ED;
+    min-height: 30px;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
 
+.copyright {
+    color: #fff;
+    line-height: 30px;
+    min-height: 30px;
+    padding: 7px 0;
+}
+/**Footer Css End**/
