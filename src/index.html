@@ -22,9 +22,13 @@
         </div>
     </header>
     <!--Header Section End-->
+      <main>
+        <div class="row col-sm-offset-11 col-md-1 chat_box" id="id_chatbox">
+            <img src="/assets/img/voice.png" class="img-circle" alt="voice chat">
+        </div>   
         <!--Main Chat Box Start-->
         <div class="container">
-            <div class="row chat-window col-xs-5 col-md-3" id="chat_window_1" style="margin-left:10px;">
+            <div class="row chat-window col-xs-5 col-md-3" id="chat_window_1" style="display: none">
                 <div class="col-xs-12 col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-heading top-bar">
@@ -32,10 +36,10 @@
                                 <h3 class="panel-title">Voice Chat</h3>
                             </div>
                             <div class="col-md-4 col-xs-4" style="text-align: right;">
-                                <a href="#"><span id="minim_chat_window" class="glyphicon panel-collapsed glyphicon-plus icon_minim"></span></a>
+                                <a href="#"><span class="glyphicon glyphicon-chevron-right icon_close" data-id="chat_window_1"></span></a>
                             </div>
                         </div>
-                        <div class="panel-body msg_container_base" style="display:none;">
+                        <div class="panel-body msg_container_base">
                             <div class="row msg_container base_sent">
                                 <div class="col-md-10 col-xs-10">
                                     <div class="messages msg_sent">
@@ -82,18 +86,25 @@
                             </div>
                         </div>
                         <div class="panel-footer">
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <div class="inner-addon right-addon">
-                                    <i class="glyphicon glyphicon-volume-down"></i>
+                                   <i class="glyphicon glyphicon-volume-down"></i> 
                                     <input type="text" class="form-control chat_input" placeholder="Send Your Message here" />
                                 </div>
-                            </div>
+                            </div> -->
+                            <div class="input-group">
+                            <input id="btn-input" type="text" class="form-control input-sm chat_input" placeholder="Send your message here..." />
+                            <span class="input-group-btn">
+                               <button class="btn glyphicon glyphicon-volume-down btn-sm" id="btn-chat"></button>
+                            </span>
+                        </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!--Main chat box end-->
+      </main>  
     <footer>
         <!--Footer Start-->
         <div class="footer-bottom">

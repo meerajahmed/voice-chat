@@ -25,3 +25,32 @@ $(document).on('focus', '.panel-footer input.chat_input', function(e) {
         $('#minim_chat_window').removeClass('glyphicon-plus').addClass('glyphicon-minus');
     }
 });
+
+/**Function for removing chat box on close icon**/
+
+$(document).on('click', '.icon_close', function (e) {
+    //$(this).parent().parent().parent().parent().remove();
+    //$( "#chat_window_1" ).remove();
+    $('#chat_window_1').animate({width: 'toggle'}, 1000, function(){
+    	$(this).hide();
+	});
+	$("#id_chatbox").show();
+
+});
+
+$(document).on('click', '#id_chatbox', function (e) {
+    $('#chat_window_1').animate({width: 'toggle'}, 1000, function(){
+    	$('#chat_window_1').show();
+	});
+    $("#id_chatbox").hide();
+});
+
+$(document).on('click','#btn-chat',function(e){
+	var $this = $(this);
+	if ($this.hasClass('glyphicon-volume-down')) {
+		 $this.removeClass('glyphicon-volume-down').addClass('glyphicon-bullhorn btn-primary');
+	}
+	else{
+		$this.removeClass('glyphicon-bullhorn btn-primary').addClass('glyphicon-volume-down');
+	}
+})
