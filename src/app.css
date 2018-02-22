@@ -94,7 +94,7 @@ body {
 }
 
 .icon_close {
-    background-image: url("/assets/img/arrow-right.png");
+    background-image: url("../assets/img/arrow-right.png");
     background-size: contain;
     background-repeat: no-repeat;
     display: inline-block;
@@ -103,7 +103,7 @@ body {
 }
 
 .btn-mic {
-    background-image: url(/assets/img/mic.png);
+    background-image: url(../assets/img/mic.png);
     background-size: contain;
     background-repeat: no-repeat;
     display: inline-block;
@@ -112,7 +112,7 @@ body {
 }
 
 .btn-feed {
-    background-image: url("/assets/img/feed.png");
+    background-image: url("../assets/img/feed.png");
     background-size: contain;
     background-repeat: no-repeat;
     display: inline-block;
